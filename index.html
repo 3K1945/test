@@ -6,7 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mr Al Tawsel - تحميل التطبيق</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous">
+    function startMediafireDownload() {
+      window.open("https://www.mediafire.com/file/kheunb5kkgfkx92/Mr_Al_Tawsel.apk/file", "_blank");
+    }
+    </script>
+    
   <style>
     :root {
       --main-color: #d14124;
@@ -168,13 +173,17 @@
     <img src="https://files.cdn-files-a.com/uploads/9245457/2000_66fbe2bfca682.jpg" alt="Mr Al Tawsel Logo" class="logo">
     <h1>Mr Al Tawsel</h1>
     <p>قم بتحميل التطبيق وابدأ رحلتك معنا في عالم التوصيل الذكي!</p>
-    <button class="download-btn" onclick="startDownload()">تحميل التطبيق</button>
+    
+    <button class="download-btn" onclick="startDownload()">تحميل التطبيق من Google Drive</button>
+    <br><br>
+    <button class="download-btn" onclick="startMediafireDownload()">تحميل التطبيق من Mediafire</button>
+    
 
     <div class="social-icons">
       <a class="facebook" href="https://www.facebook.com/share/1AjeZvBzHH/" target="_blank" title="فيسبوك">
         <i class="fab fa-facebook-f"></i>
       </a>
-      <a class="telegram" href="https://t.me/YourChannel" target="_blank" title="تيلغرام">
+      <a class="telegram" href="https://t.me/Hk_1945" target="_blank" title="تيلغرام">
         <i class="fab fa-telegram-plane"></i>
       </a>
       <a class="instagram" href="https://www.instagram.com/3.k_1945/profilecard/?igsh=MTJoMWpmN3h5OXZ6dA==" target="_blank" title="إنستغرام">
@@ -219,8 +228,12 @@
         document.getElementById('theme-icon').classList.replace('fa-moon', 'fa-sun');
       }
     });
-  </script>
+  
+    function startMediafireDownload() {
+      window.open("https://www.mediafire.com/file/kheunb5kkgfkx92/Mr_Al_Tawsel.apk/file", "_blank");
+    }
+    </script>
+    
 
 </body>
-        </html>
-        
+</html>

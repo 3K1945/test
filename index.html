@@ -1,5 +1,224 @@
-[
-    {
-        "img": "https://files.cdn-files-a.com/uploads/7099120/2000_6838744392031.png?width=1200"
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mr Al Tawsel - تحميل التطبيق</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --main-color: #d14124;
+      --bg-light: #fdf5f3;
+      --bg-dark: #1a1a1a;
+      --text-light: #fff;
+      --text-dark: #333;
     }
-]
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--bg-light);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      transition: background 0.5s, color 0.5s;
+    }
+
+    body.dark {
+      background: var(--bg-dark);
+      color: var(--text-light);
+    }
+
+    .container {
+      background-color: white;
+      border-radius: 25px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      padding: 40px 30px;
+      text-align: center;
+      max-width: 420px;
+      width: 90%;
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    body.dark .container {
+      background-color: #2c2c2c;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .logo {
+      width: 120px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin: 10px 0;
+      font-size: 28px;
+      color: var(--main-color);
+    }
+
+    p {
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+
+    .download-btn {
+      background: linear-gradient(45deg, var(--main-color), #b22e18);
+      color: white;
+      padding: 14px 28px;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s;
+    }
+
+    .download-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -75%;
+      width: 50%;
+      height: 100%;
+      background: rgba(255,255,255,0.3);
+      transform: skewX(-20deg);
+      transition: left 0.5s;
+    }
+
+    .download-btn:hover::before {
+      left: 120%;
+    }
+
+    .social-icons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social-icons a {
+      color: white;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      transition: transform 0.3s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.1);
+    }
+
+    .facebook { background-color: #3b5998; }
+    .telegram { background-color: #0088cc; }
+    .instagram {
+      background: radial-gradient(circle at 30% 30%, #fdf497, #fd5949, #d6249f, #285AEB);
+    }
+
+    footer {
+      margin-top: 25px;
+      font-size: 13px;
+      color: #999;
+    }
+
+    .toggle-theme {
+      margin-top: 20px;
+      background: none;
+      border: none;
+      color: var(--main-color);
+      font-size: 15px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.3s;
+    }
+
+    body.dark .toggle-theme {
+      color: #ffa590;
+    }
+
+    #theme-icon {
+      transition: transform 0.6s ease, color 0.3s;
+    }
+
+    #theme-icon.animate {
+      transform: rotate(360deg) scale(1.2);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="logo.png" alt="Mr Al Tawsel Logo" class="logo">
+    <h1>Mr Al Tawsel</h1>
+    <p>قم بتحميل التطبيق وابدأ رحلتك معنا في عالم التوصيل الذكي!</p>
+    <button class="download-btn" onclick="startDownload()">تحميل التطبيق</button>
+
+    <div class="social-icons">
+      <a class="facebook" href="https://facebook.com/YourPage" target="_blank" title="فيسبوك">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a class="telegram" href="https://t.me/YourChannel" target="_blank" title="تيلغرام">
+        <i class="fab fa-telegram-plane"></i>
+      </a>
+      <a class="instagram" href="https://instagram.com/YourProfile" target="_blank" title="إنستغرام">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+
+    <button class="toggle-theme" onclick="toggleTheme()">
+      <i id="theme-icon" class="fas fa-moon"></i> تبديل الوضع
+    </button>
+
+    <footer>© 2025 Mr Al Tawsel - جميع الحقوق محفوظة</footer>
+  </div>
+
+  <script>
+    function startDownload() {
+      window.location.href = "https://drive.google.com/uc?export=download&id=1wI2Jlt9tl0164fnvd8q_tvFp6yBqFvWj";
+    }
+
+    function toggleTheme() {
+      const body = document.body;
+      const icon = document.getElementById('theme-icon');
+
+      body.classList.toggle('dark');
+
+      icon.classList.add('animate');
+
+      if (body.classList.contains('dark')) {
+        icon.classList.replace('fa-moon', 'fa-sun');
+      } else {
+        icon.classList.replace('fa-sun', 'fa-moon');
+      }
+
+      setTimeout(() => {
+        icon.classList.remove('animate');
+      }, 600);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+        document.getElementById('theme-icon').classList.replace('fa-moon', 'fa-sun');
+      }
+    });
+  </script>
+
+</body>
+</html>

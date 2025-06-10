@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -6,12 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mr Al Tawsel - تحميل التطبيق</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous">
-    function startMediafireDownload() {
-      window.open("https://www.mediafire.com/file/li453utjy4r122h/Mr_Al_Tawsel.apk/file", "_blank");
-    }
-    </script>
-    
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  
   <style>
     :root {
       --main-color: #d14124;
@@ -165,12 +160,11 @@
     #theme-icon.animate {
       transform: rotate(360deg) scale(1.2);
     }
-  
+
     .download-btn.blue {
       background: linear-gradient(45deg, #007BFF, #0056b3);
     }
-    </style>
-    
+  </style>
 </head>
 <body>
 
@@ -178,11 +172,8 @@
     <img src="https://files.cdn-files-a.com/uploads/9245457/2000_66fbe2bfca682.jpg" alt="Mr Al Tawsel Logo" class="logo">
     <h1>Mr Al Tawsel</h1>
     <p>قم بتحميل التطبيق وابدأ رحلتك معنا في عالم التوصيل الذكي!</p>
-    
-    <button class="download-btn" onclick="startDownload()">تحميل التطبيق من Google Drive</button>
-    <br><br>
+
     <button class="download-btn blue" onclick="startMediafireDownload()">تحميل التطبيق من Mediafire</button>
-    
 
     <div class="social-icons">
       <a class="facebook" href="https://www.facebook.com/share/1AjeZvBzHH/" target="_blank" title="فيسبوك">
@@ -204,8 +195,8 @@
   </div>
 
   <script>
-    function startDownload() {
-      window.location.href = "https://drive.google.com/uc?export=download&id=1x9ACycTqEq6esbq14vFnX-iVvzRAgeW6";
+    function startMediafireDownload() {
+      window.open("https://www.mediafire.com/file/li453utjy4r122h/Mr_Al_Tawsel.apk/file", "_blank");
     }
 
     function toggleTheme() {
@@ -213,7 +204,6 @@
       const icon = document.getElementById('theme-icon');
 
       body.classList.toggle('dark');
-
       icon.classList.add('animate');
 
       if (body.classList.contains('dark')) {
@@ -233,12 +223,7 @@
         document.getElementById('theme-icon').classList.replace('fa-moon', 'fa-sun');
       }
     });
-  
-    function startMediafireDownload() {
-      window.open("https://www.mediafire.com/file/li453utjy4r122h/Mr_Al_Tawsel.apk/file", "_blank");
-    }
-    </script>
-    
+  </script>
 
 </body>
 </html>
